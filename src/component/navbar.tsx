@@ -1,6 +1,7 @@
- import React, { useState } from 'react'
- import { AiOutlineMenu } from "react-icons/ai";
-import { FiMenu, FiX } from 'react-icons/fi';
+ import { useState } from 'react';
+import { FiMenu, FiX} from 'react-icons/fi';
+import logo from "../assets/logo-text.png";
+
  
  export default function Navbar() {
     
@@ -9,16 +10,17 @@ import { FiMenu, FiX } from 'react-icons/fi';
 setIsOpen(!isOpen);
     }
     function handleClose (){
-setIsOpen(isOpen);
+setIsOpen( false);
     }
    return (
      <nav className='  flex container justify-between  mt-1.5  m-auto items-center'>
          <button className='text-2xl md:hidden' onClick={handleOpen}><FiMenu /> </button>
         
-       {
-         <div className={`fixed left-3 top-0 z-50 h-full w-64 md:hidden absolute overflow-hidden transition-transform duration-300 right-6 top-16 w-30 items-center      ${isOpen ?"translate-x-0": "-translate-x-full"}`}>
+       
+         <div className={` fixed left-3 top-5 z-50 h-full w-64 md:hidden overflow-hidden transition-transform duration-300    items-center 
+              ${isOpen ?"translate-x-0": "-translate-x-full"}`}>
             
-                 <button className='text-2xl md:hidden' onClick={handleClose }> </button>
+                 <button className='text-2xl md:hidden' onClick={handleClose }><FiX /> </button>
              <div className='flex flex-col gap-6 shadow-xl'>
              <a href="">Home</a>
             <a href="">Technologies</a> 
@@ -30,13 +32,13 @@ setIsOpen(isOpen);
             </div>
         
         
-       }
        
        
-       <img src="/assets/logo-text.png" alt="" />
-       <div className=' '>
+       
+       <img src={logo} alt="logo" />
+       <div  >
          <ul className='hidden md:flex gap-6  ' >
-            <li className='text-red-500'>Home<a href=""></a> </li>
+            <li className='text-red-500'><a href="">Home</a> </li>
             <li><a href="">Technologies</a> </li>
             <li><a href="">Projects</a></li>
             <li><a href="">About</a></li>
