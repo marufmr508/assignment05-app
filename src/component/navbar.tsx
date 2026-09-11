@@ -13,7 +13,7 @@ setIsOpen(!isOpen);
 setIsOpen( false);
     }
    return (
-     <nav className='  flex container justify-between  mt-1.5  m-auto items-center'>
+     <nav className='  flex container justify-between  mt-1.5  mx-auto  items-center'>
          <button className='text-2xl md:hidden' onClick={handleOpen}><FiMenu /> </button>
         
        
