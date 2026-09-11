@@ -4,6 +4,7 @@
 // import viteLogo from './assets/vite.svg'
 // import './App.css'
 import Navbar from "./component/navbar"
+import Hero from "./component/hero"
 
 function App() {
    
@@ -11,7 +12,8 @@ function App() {
   return (
     <>
          <Navbar />
- 
+
+ <Hero />
       
 
       
