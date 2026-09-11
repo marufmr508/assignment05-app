@@ -5,5 +5,5 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
-   base:"/Assignment05-app"
+   base:"/Assignment05-app/",
 })
