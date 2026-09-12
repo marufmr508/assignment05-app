@@ -74,7 +74,8 @@ handleAddToChart={handleAddToChart}
               <div>
                 {
                     stack.map((technology:TechnologyType)=>(
-                        <div key={technology.id} className="flex shadow-md mt-5">
+                        <div key={technology.id} className="flex shadow-purple-500 shadow-2xl
+                           rounded-xl mt-5">
                             <div className="flex gap-3.5 pl-5 ">
                             <img className="rounded-full items-center w-12" src={technology.icon} alt={technology.name} />
                            <div className="font-bold text-xl">
@@ -95,7 +96,7 @@ handleAddToChart={handleAddToChart}
                 {stack.length > 0 && (
                     
             <button onClick={handleRemoveAll}
-        className="text-red-500 font-semibold hover:text-red-700 border-2 border-red-400 mx-auto mt-10 ml-20 px-3 rounded-2xl bg-linear-60 from-purple-700 to from--400 text-white"
+        className=" font-semibold hover:text-red-700 border-2 border-red-400 mx-auto mt-10 ml-20 px-3 rounded-2xl bg-linear-60 from-green-700 to from--400 text-white"
             > Remove All</button>)}
 
             
