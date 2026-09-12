@@ -4,6 +4,8 @@
 import { use, useState } from "react";
 import type {TechnologyType} from "../type";
 import Technology from '../component/Technology';
+import toast from "react-hot-toast"
+import { CiCircleRemove } from "react-icons/ci";
  
 export interface TechnologyProps{
     technologyListPromise:Promise<TechnologyType[]>
@@ -27,12 +29,17 @@ function handleAddToChart(technology:TechnologyType):void{
                  return previousTechnology;
                 }
                 
-    
+               toast.success("Stack Selected")
+                
           return[...previousTechnology,technology]
 })
 }
+function handleRemove(id:string):void{
+    setStack((previousStack)=>
+                  previousStack.filter((technology)=>technology.id !==id));
 
 
+}
 
     const technologyList=use(technologyListPromise);
     console.log(technologyList);
@@ -59,10 +66,31 @@ handleAddToChart={handleAddToChart}
     
       
        </div>
-        <div className=" w-90 h-60 max-w-sm border rounded-xl p-4   rounded-xl shadow-2xl items-center gap-5 ">
+        <div className="max-h-max w-100  max-w-sm border rounded-xl p-4  shadow-2xl items-center gap-5 ">
             <h1 className="  text-2xl sm:text-xl font-bold text-blue-500">Your Stack</h1>
-            <p>technologies selected:{stack.length}</p>
-            <div className="border-2 border-red-500 w-20 h-20">
+            <p>{stack.length}  technologies selected</p>
+              <div>
+                {
+                    stack.map((technology:TechnologyType)=>(
+                        <div key={technology.id} className="flex shadow-md mt-5">
+                            <div className="flex gap-3.5 pl-5 ">
+                            <img className="rounded-full items-center w-12" src={technology.icon} alt={technology.name} />
+                           <div className="font-bold text-xl">
+                              {technology.name}
+                              <div className="opacity-60 text-[12px]">
+                                {technology.category}
+                               
+                           </div>
+                           </div>
+                              <button  onClick={()=>handleRemove(technology.id)} className="text-red-400 font-bold text-3xl"><CiCircleRemove /></button>
+
+                           </div>
+                           </div>
+                         
+                    
+               ))}
+              </div>
+            <div>
 
             </div>
 
