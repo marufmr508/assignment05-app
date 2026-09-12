@@ -39,7 +39,10 @@ function handleRemove(id:string):void{
 
 
 }
+function handleRemoveAll():void {
+    setStack([]);
 
+}
     const technologyList=use(technologyListPromise);
     console.log(technologyList);
      
@@ -84,10 +87,18 @@ handleAddToChart={handleAddToChart}
                               <button  onClick={()=>handleRemove(technology.id)} className="text-red-400 font-bold text-3xl"><CiCircleRemove /></button>
 
                            </div>
+  
                            </div>
                          
                     
                ))}
+                {stack.length > 0 && (
+                    
+            <button onClick={handleRemoveAll}
+        className="text-red-500 font-semibold hover:text-red-700 border-2 border-red-400 mx-auto mt-10 ml-20 px-3 rounded-2xl bg-linear-60 from-purple-700 to from--400 text-white"
+            > Remove All</button>)}
+
+            
               </div>
             <div>
 
