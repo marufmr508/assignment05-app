@@ -48,7 +48,7 @@ function handleRemove(id:string):void{
        <section className=" container mx-auto px-5 py-10">
 <h1 className="font-bold text-5xl mb-3">Explore the  <span className="text-pink-500">Technologies</span></h1>
         <p className="mb-10 text-2xl opacity-70">Pick one technology per category to build your ideal stack.</p>
-        <div className="flex gap-9  "> 
+        <div className="flex flex-col lg:flex-row gap-9  "> 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         
     {
@@ -65,7 +65,7 @@ handleAddToChart={handleAddToChart}
     
       
        </div>
-        <div className="max-h-max w-100  max-w-sm border rounded-xl p-4  shadow-2xl items-center gap-5 ">
+        <div className="max-h-max w-full lg:w-100  max-w-sm border rounded-xl p-4  shadow-2xl items-center gap-5 ">
             <h1 className="  text-2xl sm:text-xl font-bold text-blue-500">Your Stack</h1>
             <p>{stack.length}  technologies selected</p>
               <div>

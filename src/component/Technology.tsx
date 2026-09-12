@@ -12,10 +12,10 @@ export default function Technology({technology,handleAddToChart}:typeCard) {
   return (
      
        
-      <div className="w-full max-w-sm border rounded-xl p-4 shadow-sm border-0">
+      <div className="w-full max-w-sm rounded-xl p-4 shadow-sm border-0">
 
       {/* Icon + Badge */}
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between items-center  ">
         <img
           src={technology.icon}
           alt={technology.name}
