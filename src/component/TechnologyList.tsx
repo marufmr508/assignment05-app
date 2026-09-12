@@ -1,6 +1,4 @@
-// import React from 'react'
-
-// import { type } from '../type'
+   
 import { use, useState } from "react";
 import type {TechnologyType} from "../type";
 import Technology from '../component/Technology';
@@ -29,10 +27,11 @@ function handleAddToChart(technology:TechnologyType):void{
                  return previousTechnology;
                 }
                 
-               toast.success("Stack Selected")
+               
                 
           return[...previousTechnology,technology]
 })
+toast.success("Stack Selected")
 }
 function handleRemove(id:string):void{
     setStack((previousStack)=>
