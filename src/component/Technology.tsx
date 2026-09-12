@@ -1,9 +1,14 @@
 // import React from 'react'
 import type { TechnologyType } from "../type"
+
 interface typeCard{
 technology:TechnologyType
+ handleAddToChart(technology:TechnologyType):void;
 }
-export default function Technology({technology}:typeCard) {
+export default function Technology({technology,handleAddToChart}:typeCard) {
+    function addToChart(){
+        handleAddToChart(technology);
+    }
   return (
      
        
@@ -50,7 +55,7 @@ export default function Technology({technology}:typeCard) {
       </div>
 
       {/* Button */}
-      <button className="w-full mt-4 bg-gray-900 text-white py-2 rounded-lg hover:bg-purple-600 transition">
+      <button onClick={(addToChart)} className="w-full mt-4 bg-gray-900 text-white py-2 rounded-lg hover:bg-purple-600 transition">
         Add to Stack
       </button>
 
