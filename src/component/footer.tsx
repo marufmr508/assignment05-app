@@ -46,10 +46,10 @@ modern software.</p>
          
          
      </section>
-      <div className="mx-auto flex justify-between container mb-10">
+      <div className="mx-auto flex px-5  justify-between container mb-10">
         <p className="opacity-60">© 2026 Dev Stack. All rights reserved.</p>
         <div >
-<ul className="flex gap-10 opacity-60">
+<ul className="flex  gap-6  sm:gap-10 opacity-60">
     <li>Terms</li>
 <li>Privacy</li>
 </ul>
