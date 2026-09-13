@@ -3,7 +3,8 @@ import Navbar from "./component/navbar"
 import Hero from "./component/hero"
 import TechnologyList ,{ technologyListPromise} from "./component/TechnologyList"
 import { Suspense } from "react"
-import {Toaster} from "react-hot-toast"
+ import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "./component/footer"
 
 function App() {
@@ -18,19 +19,16 @@ function App() {
              <TechnologyList technologyListPromise={ technologyListPromise()} />
       </Suspense>
       <Footer />
-       <Toaster
-        position="top-right" 
-        toastOptions={{duration:2000,
-            style:{
-borderRadius:"12px",
-padding:"14px 18px",
-background: "linear-gradient(to right ,cyan ,pink,pink)"
-// fontSize:"15px"
-            }
-        }}
+         <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+      />
     
         
-        />
+         
 
       
     </>

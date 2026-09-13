@@ -13,15 +13,15 @@ setIsOpen(!isOpen);
 setIsOpen( false);
     }
    return (
-     <nav className='  flex container justify-between  mt-1.5  mx-auto  items-center'>
+     <nav className='shadow-md rounded-xl sticky top-0 z-50 flex container justify-between  mt-2.5  mx-auto  items-center'>
          <button className='text-2xl md:hidden' onClick={handleOpen}><FiMenu /> </button>
         
        
-         <div className={` fixed left-3 top-5 z-50 h-full w-64 md:hidden overflow-hidden transition-transform duration-300    items-center 
+         <div className={` fixed left-3 top-5 z-50 h-full w-64 md:hidden overflow-hidden transition-transform duration-300  bg-white    
               ${isOpen ?"translate-x-0": "-translate-x-full"}`}>
             
                  <button className='text-2xl md:hidden' onClick={handleClose }><FiX /> </button>
-             <div className='flex flex-col gap-6 shadow-xl'>
+             <div className='flex flex-col gap-6 '>
              <a href="">Home</a>
             <a href="">Technologies</a> 
             <a href="">Projects</a> 

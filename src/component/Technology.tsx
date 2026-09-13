@@ -4,15 +4,17 @@ import type { TechnologyType } from "../type"
 interface typeCard{
 technology:TechnologyType
  handleAddToChart(technology:TechnologyType):void;
+ isAdded:boolean
+  
 }
-export default function Technology({technology,handleAddToChart}:typeCard) {
+export default function Technology({technology,handleAddToChart,isAdded}:typeCard) {
     function addToChart(){
         handleAddToChart(technology);
     }
   return (
      
        
-      <div className="w-full max-w-sm rounded-xl p-4 shadow-sm border-0  ">
+      <div className="w-full max-w-sm rounded-xl p-4 shadow-md border-0  ">
 
       {/* Icon + Badge */}
       <div className="flex justify-between items-center  ">
@@ -55,8 +57,11 @@ export default function Technology({technology,handleAddToChart}:typeCard) {
       </div>
 
       {/* Button */}
-      <button onClick={(addToChart)} className="w-full mt-4 bg-gray-900 text-white py-2 rounded-lg hover:bg-purple-600 transition">
-        Add to Stack
+      <button  
+      disabled={isAdded} 
+      onClick={(addToChart)}
+       className="w-full disabled:bg-green-500 mt-4 bg-gray-900 text-white py-2 rounded-lg hover:bg-purple-600 transition">
+          {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
 
     </div>

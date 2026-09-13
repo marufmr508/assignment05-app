@@ -4,14 +4,15 @@ import logo from "../assets/logo-text.png"
 export default function Footer() {
   return (
     <div> 
-     <section className="mt-20   container  mx-auto mb-20 shadow-sm px-13 sm:px-10 py-13 flex flex-col lg:flex-row gap-3 lg:gap-20 justify-between items-base  ">
+     <section className="mt-20   container  mx-auto mb-20 shadow-sm px-13 sm:px-10 py-13 flex flex-col lg:flex-row gap-3 lg:gap-20 justify-between items-start  ">
         <div className="space-y-1.5">
 <img src={logo} alt="logo" />
 <p className="opacity-60">Curated tools, technologies, and resources for developers building
 modern software.</p>
 <div className="flex gap-5">
-    <p className="font-bold">GitHub</p>
-    <p className="font-bold">Twitter</p>
+     <a href="https://github.com/programminghero1" className="font-bold">GitHub</a>
+    <p  className="font-bold">Twitter</p>
+     
     <p className="font-bold">LinkedIn</p>
 </div>
 </div>

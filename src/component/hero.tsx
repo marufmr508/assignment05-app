@@ -4,7 +4,7 @@ import logo from "../assets/banner-stack.png"
 export default function Hero() {
   return (
 
-    <section className="container mx-auto mt-20 mb-20 p-5 flex flex-col md:flex-row justify-between items-center   sm:flex-col">
+    <section className="container mx-auto mt-20 mb-10 sm:mb-5 p-5 flex flex-col md:flex-row justify-between items-center   sm:flex-col">
       <div className="space-y-10 text-center">
         <h1 className="font-bold text-5xl ">Build Your Ideal <br className="sm:block" />
  <span className="text-transparent bg-linear-to-r bg-clip-text from-purple-500 to bg-green-400">Development Stack</span></h1>
