@@ -13,7 +13,7 @@ modern software.</p>
      <a href="https://github.com/programminghero1" className="font-bold">GitHub</a>
      <a className="font-bold" href="">Twitter</a>
      
-     <a className="font-bold" href="LinkedIn">LinkedIn</a>
+     <a className="font-bold" href="">LinkedIn</a>
 </div>
 </div>
         <div>    
