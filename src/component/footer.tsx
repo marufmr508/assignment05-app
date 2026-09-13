@@ -11,9 +11,9 @@ export default function Footer() {
 modern software.</p>
 <div className="flex gap-5">
      <a href="https://github.com/programminghero1" className="font-bold">GitHub</a>
-    <p  className="font-bold">Twitter</p>
+     <a className="font-bold" href="">Twitter</a>
      
-    <p className="font-bold">LinkedIn</p>
+     <a className="font-bold" href="LinkedIn">LinkedIn</a>
 </div>
 </div>
         <div>    

@@ -21,19 +21,22 @@ return data;
 export default function TechnologyList({technologyListPromise}:TechnologyProps) {
 const[stack ,setStack]=useState<TechnologyType[]>([])
 
-function handleAddToChart(technology:TechnologyType):void{
-    setStack((previousTechnology)=>{
-                const alreadySelected = previousTechnology.some((stack)=>stack.id===technology.id);
-                if(alreadySelected){
-                     toast.warning("Technology already added!");
-                 return previousTechnology;
-                }
-               
-              
-                
-          return[...previousTechnology,technology]
-})
-   toast.success(" Add to Stack")
+  function handleAddToChart(technology: TechnologyType): void {
+  const alreadySelected = stack.some(
+    (item) => item.id === technology.id
+  );
+
+  if (alreadySelected) {
+    toast.warning("Technology already added!");
+    return;
+  }
+
+  setStack((previousTechnology) => [
+    ...previousTechnology,
+    technology,
+  ]);
+
+  toast.success("Added to Stack!");
 }
 function handleRemove(id:string):void{
     setStack((previousStack)=>
